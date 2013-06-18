@@ -45,7 +45,7 @@ describe User do
     it "should not allow access to admin" do
       expect do
         User.new(name: "Example User", email: "useradmin@example.com",
-                     password: "foobar", password_confirmation: "foobar", admin: true)
+                     password: "foobar", passwordword_confirmation: "foobar", admin: true)
       end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end
   end
